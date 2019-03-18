@@ -2,31 +2,28 @@ var randomNumbers;
 var wins;
 var loses;
 
+randomNumbers = Math.floor(Math.random() * (120-19) +1) + 19;
+console.log(randomNumbers);
 
-
-
-
+$("#random").html('Random Numbers: ');
 
 
 //create four crystal array to be displayed as buttons. 
 //create click function for each crystal that will add specific amount of points to players score counter to equal to random number shown at start should be between 19-120. 
 
+for (var i = 0; i < 4; i++) { //for loop for cyrstals 
 
-
-for(var i = 0; i < 4; i++) {
-
-   var randomNumber = Math.floor(Math.random() * 12) + 1;
-   console.log(" random numbers crystals");
+    var randomNumber = Math.floor(Math.random() * 12) + 1; //random number generator for crystals bethween 1-12.
+    console.log(" random numbers crystals");
     var crystal = $("<p>");
-    crystal.attr({"class": 'crystal', "data-random": randomNumber //creates
-});
-   
-    $(".crystals").append(crystal);
+    crystal.attr({
+        "class": 'crystal', "data-random": randomNumber //assigns class attribute and class name and applies random number generator 
+    });
+    console.log("show");
 
+    $(".crystals").append(crystal); //inserts content above into all 4 cyrstals
     console.log(" for loop ");
 }
-
-
 //create random number array to be shown at start of the game. 
 
 
